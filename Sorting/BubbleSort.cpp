@@ -5,6 +5,7 @@ A simple sorting algorithm that repeatedly swaps pairs of
 wrongly placed adjacent elements. Also known as sinking sort.
 Only advantage of using Bubble Sort is due to the best case time 
 complexity.
+Use order = +/- 1 for increasing and decreasing orders respectively.
 -----------
 Time Complexity : Best Case: O(n)
                   Average and Worst Case: O(n^2)
