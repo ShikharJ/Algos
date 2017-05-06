@@ -11,8 +11,8 @@ Time Complexity : Best Case: O(n)
                   Average and Worst Case: O(n^2)
 Space Complexity : O(1)
 Stable : Yes
-In-Place: Yes
-Online: No
+In-Place : Yes
+Online : No
 */
 
 #include <iostream>
