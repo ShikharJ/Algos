@@ -10,7 +10,7 @@ no more than k places away from its sorted position.
 Use order = +/- 1 for increasing and decreasing orders respectively.
 --------------
 Time Complexity : Best Case: O(n)
-                 Average and Worst Case: O(n^2)
+                  Average and Worst Case: O(n^2)
 Space Complexity : O(1)
 Stable : Yes
 In-Place : Yes
