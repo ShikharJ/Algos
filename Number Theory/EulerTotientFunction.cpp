@@ -8,7 +8,7 @@ of integers k in the range 1 ≤ k ≤ n for which the greatest
 common divisor gcd(n, k) is equal to 1. It plays a key role in 
 the definition of the RSA encryption system.
 ----------------------
-Time complexity : O(m*n^0.5)
+Time complexity : O(n^0.5)
 Space complexity : O(1)
 */
 
