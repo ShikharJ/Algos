@@ -40,10 +40,10 @@ string add(string num1, string num2){
 		int sum = a + b + carryover;
 		carryover = sum / 10;
 		sum = sum % 10;
-		result = (char)sum + result;
+		result = to_string(sum) + result;
 	}
 	if (carryover)
-		result = (char)carryover + result;
+		result = to_string(carryover) + result;
 	return result;
 }
 
