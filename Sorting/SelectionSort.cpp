@@ -17,20 +17,21 @@ Online : No
 */
 
 #include <iostream>
-#include <vectot>
+#include <vector>
 
 using namespace std;
 
 void selection_sort(vector<int> v, int order){
-    size_t position;
-    for (size_t i = 0; i < v.size() - 1; i++){
-        position = i;
-        for (size_t j = i + 1; j < v.size(); j++){
-            if (order * v[position] > order * v[j]){
-                position = j;
+    size_t n = v.size();
+    for (size_t gap = n / 2; gap > 0; gap /= 2){
+        for (size_t i = gap; i < n; i++){
+            int temp = v[i];
+            size_t j = i;
+            while (j >= gap and v[j - gap] * order > temp * order){
+                v[j] = v[j - gap];
+                j -= gap;
             }
+            v[j] = temp;
         }
-        if (position != i)
-            swap(v[i], v[position]);
     }
 }
