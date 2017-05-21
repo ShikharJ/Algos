@@ -24,7 +24,7 @@ using namespace std;
 
 srand(time(NULL));
 
-size_t partition(vector<int> v, size_t start, size_t end, int order){
+size_t partition(vector<int> &v, size_t start, size_t end, int order){
 	size_t random_index = start + (rand() % (end - start + 1));
 	swap(v[random_index], v[start]);
 	int pivot = v[start];
@@ -39,7 +39,7 @@ size_t partition(vector<int> v, size_t start, size_t end, int order){
 	return i - 1;
 }
 
-void quick_sort(vector<int> v, size_t start, size_t end, int order){
+void quick_sort(vector<int> &v, size_t start, size_t end, int order){
 	if (start < end){
 		size_t pivot_index = partition(v, start, end, order);
 		quick_sort(v, start, pivot_index - 1, order);

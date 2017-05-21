@@ -22,7 +22,7 @@ Online : Yes
 
 using namespace std;
 
-void insertion_sort(vector<int> v, int order){
+void insertion_sort(vector<int> &v, int order){
     int key;
     size_t j;
     for (size_t i = 1; i < v.size(); i++){

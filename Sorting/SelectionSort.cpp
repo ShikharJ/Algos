@@ -21,7 +21,7 @@ Online : No
 
 using namespace std;
 
-void selection_sort(vector<int> v, int order){
+void selection_sort(vector<int> &v, int order){
     size_t n = v.size();
     for (size_t gap = n / 2; gap > 0; gap /= 2){
         for (size_t i = gap; i < n; i++){

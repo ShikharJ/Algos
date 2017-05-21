@@ -25,7 +25,7 @@ Online : No
 
 using namespace std;
 
-void shell_sort(vector<int> v, int order){
+void shell_sort(vector<int> &v, int order){
     for (size_t gap = v.size() / 2; gap > 0; gap /= 2){
         for (size_t i = gap; i < v.size(); i++){
             int element = v[i];

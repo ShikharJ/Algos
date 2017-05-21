@@ -20,7 +20,7 @@ Online : No
 
 using namespace std;
 
-void bubble_sort(vector<int> v, int order){
+void bubble_sort(vector<int> &v, int order){
     for (size_t i = 0; i < v.size() - 1; i++){
         for (size_t j = 0; j < v.size() - i - 1; j++){
             if (order * values[j] > order * values[j + 1])
