@@ -4,8 +4,8 @@ Kamenetsky's Function Algorithm
 Kamenetsky's function is a common number theory function
 for finding the number of digits in the factorial of any number.
 ----------------------
-Time complexity : O(1)
-Space complexity : O(1)
+Time Complexity : O(1)
+Space Complexity : O(1)
 */
 
 #include <iostream>

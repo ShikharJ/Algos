@@ -6,8 +6,8 @@ The Euclidean algorithm is based on the principle that the greatest common divis
 of two numbers does not change if the larger number is replaced by its difference with
 the smaller number.
 ----------------------
-Time complexity : O(log(min(A, B)))
-Space complexity : O(1)
+Time Complexity : O(log(min(A, B)))
+Space Complexity : O(1)
 */
 
 #include <iostream>
