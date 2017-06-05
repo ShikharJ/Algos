@@ -13,6 +13,7 @@ Space Complexity : O(n)
 
 #include <iostream>
 #include <vector>
+#include <queue>
 
 struct node{
 	vector<int> adjacency;
@@ -26,6 +27,7 @@ void bfs(int source){
 	v.push_back(source);
 	while(!v.empty()){
 		int temp = v.front();
+		v.pop_front();
 		disovered[temp] = true;
 		for (int i = 0; i < graph[temp].adjacency.size(); i++){
 			if (!discovered[graph[temp].adjacency[i]]){
