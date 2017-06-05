@@ -6,7 +6,7 @@ for every directed edge uv from vertex u to vertex v, u comes
 before v in the ordering. A topological ordering is possible if 
 and only if the graph is a directed acyclic graph (DAG).
 ----------------------------
-Time Complexity : O(n)
+Time Complexity : O(n+m)
 Space Complexity : O(n)
 */
 
@@ -20,7 +20,7 @@ struct node{
 	vector<int> adjacency;
 };
 
-struct node graph[10000];
+node graph[10000];
 bool discovered[10000];
 int indegree[10000];
 int toposort[10000];

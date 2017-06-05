@@ -7,7 +7,7 @@ root (or some arbitrary node of a graph, sometimes referred to
 as a 'search key') and explores the neighbor nodes first, 
 before moving to the next level neighbors.
 ------------------------------
-Time Complexity : O(n)
+Time Complexity : O(n+m)
 Space Complexity : O(n)
 */
 
