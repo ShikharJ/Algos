@@ -18,19 +18,19 @@ struct node{
 	vector<int> adjacency;
 };
 
-node graph[10000];
+struct node graph[10000];
 bool discovered[10000] = {};
 
 void dfs(int source){
 	stack<int> v;
-	v.push_front(source);
+	v.push(source);
 	while(!v.empty()){
-		int temp = v.back();
-		v.pop_back();
+		int temp = v.top();
+		v.pop();
 		discovered[temp] = true;
 		for (int i = 0; i < graph[temp].adjacency.size(); i++){
 			if (!discovered[graph[temp].adjacency[i]]){
-				v.push_back(graph[temp].adjacency[i]);
+				v.push(graph[temp].adjacency[i]);
 				discovered[graph[temp].adjacency[i]] = true;
 			}
 		}

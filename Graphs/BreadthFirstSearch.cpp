@@ -19,19 +19,19 @@ struct node{
 	vector<int> adjacency;
 };
 
-node graph[10000];
+struct node graph[10000];
 bool discovered[10000] = {};
 
 void bfs(int source){
 	queue<int> v;
-	v.push_back(source);
+	v.push(source);
 	while(!v.empty()){
 		int temp = v.front();
-		v.pop_front();
+		v.pop();
 		disovered[temp] = true;
 		for (int i = 0; i < graph[temp].adjacency.size(); i++){
 			if (!discovered[graph[temp].adjacency[i]]){
-				v.push_back(graph[temp].adjacency[i]);
+				v.push(graph[temp].adjacency[i]);
 				discovered[graph[temp].adjacency[i]] = true;
 			}
 		}
