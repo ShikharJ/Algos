@@ -26,6 +26,7 @@ void dfs(int source){
 	v.push_front(source);
 	while(!v.empty()){
 		int temp = v.back();
+		v.pop_back();
 		discovered[temp] = true;
 		for (int i = 0; i < graph[temp].adjacency.size(); i++){
 			if (!discovered[graph[temp].adjacency[i]]){
