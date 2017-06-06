@@ -4,8 +4,8 @@ Kosaraju's Algorithm
 Kosaraju's algorithm is a linear time algorithm to find the 
 strongly connected components of a directed graph. It makes 
 use of the fact that the transpose graph (the same graph with
- the direction of every edge reversed) has exactly the same 
- strongly connected components as the original graph.
+the direction of every edge reversed) has exactly the same 
+strongly connected components as the original graph.
 --------------------
 Time Complexity : O(n+m)
 Space Complexity : O(n)
