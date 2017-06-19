@@ -14,6 +14,8 @@ Space Complexity : O(n)
 #include <vector>
 #include <stack>
 
+using namespace std;
+
 struct node{
 	vector<int> adjacency;
 };

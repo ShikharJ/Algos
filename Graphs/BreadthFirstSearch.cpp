@@ -15,6 +15,8 @@ Space Complexity : O(n)
 #include <vector>
 #include <queue>
 
+using namespace std;
+
 struct node{
 	vector<int> adjacency;
 };

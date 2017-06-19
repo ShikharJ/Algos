@@ -15,6 +15,8 @@ Space Complexity : O(n)
 #include <vector>
 #include <stack>
 
+using namespace std;
+
 static int n, m;
 
 struct node{
