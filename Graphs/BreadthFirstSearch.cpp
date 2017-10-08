@@ -30,7 +30,7 @@ void bfs(int source){
 	while(!v.empty()){
 		int temp = v.front();
 		v.pop();
-		disovered[temp] = true;
+		discovered[temp] = true;
 		for (int i = 0; i < graph[temp].adjacency.size(); i++){
 			if (!discovered[graph[temp].adjacency[i]]){
 				v.push(graph[temp].adjacency[i]);
