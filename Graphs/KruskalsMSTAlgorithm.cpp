@@ -23,7 +23,7 @@ struct edge{
 	int start, end;
 	int weight;
 	bool operator <(const edge &e) const{
-		return (weight < a.weight);
+		return (weight < e.weight);
 	}
 };
 
@@ -70,11 +70,11 @@ int kruskal(){
 	for (int i = 0; i < n; i++){
 		makeset(i);
 	}
-	sort(e, e + m);
+	sort(edges, edges + m);
 	for (int i = 0; i < m and num_components > 1; i++){
-		if (find(e[i].start) != find(e[i].end)){
-			join(e[i].start, e[i].end);
-			returned += e[i].weight;
+		if (find(edges[i].start) != find(edges[i].end)){
+			join(edges[i].start, edges[i].end);
+			returned += edges[i].weight;
 			num_components--; 
 		}
 	}
