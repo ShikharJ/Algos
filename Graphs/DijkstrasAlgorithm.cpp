@@ -61,7 +61,7 @@ void dijkstra(int source){
 		v.pop();
 		int node = current.node;
 		int distance = current.distance;
-		for (int i = 0; i < graph[i].adjacency.size(); i++){
+		for (int i = 0; i < graph[node].adjacency.size(); i++){
 			if (!discovered[graph[node].adjacency[i]]){
 				int nextnode = graph[node].adjacency[i];
 				if (distance + graph[node].weight[i] < graph[nextnode].distance){
