@@ -35,7 +35,7 @@ bool discovered[10000];
 struct entry{
 	int node;
 	int distance;
-	bool operator <(const entry &a){
+	bool operator <(const entry &a) const{
 		if (distance != a.distance)
 			return distance > a.distance;
 		return node > a.node;
