@@ -17,38 +17,38 @@ using namespace std;
 
 int vertices, edges;
 
-int distance[1000];
+int cost[1000];
 
-struct egde{
-	int x;
-	int y;
-	int weight;
+struct Edge{
+    int x;
+    int y;
+    int weight;
 };
 
-struct edge E[1000];
+Edge E[1000];
 
 int bellmanford(int source){
-	for (int i = 0; i < vertices; i++){
-		if (i == source){
-			distance[i] = 0;
-		} else{
-			distance[i] == 1000000000;
-		}
-	}
-	bool discovered = false;
-	for (int i = 0; i < vertices and not discovered; i++){
-		discovered = true;
-		for (int j = 0; j < edges; j++){
-			int src = E[j].x;
-			int dest = E[j].y;
-			if (distance[src] + E[j].weight < distance[dest]){
-				distance[dest] = distance[src] + E[j].weight;
-				discovered = false;
-			}
-		}
-	}
-	if (not discovered){
-		return -1;
-	}
-	return 0;
+    for (int i = 0; i < vertices; i++){
+        if (i == source){
+            cost[i] = 0;
+        } else{
+            cost[i] == 1000000000;
+        }
+    }
+    bool discovered = false;
+    for (int i = 0; i < vertices and not discovered; i++){
+        discovered = true;
+        for (int j = 0; j < edges; j++){
+            int src = E[j].x;
+            int dest = E[j].y;
+            if (cost[src] + E[j].weight < cost[dest]){
+                cost[dest] = cost[src] + E[j].weight;
+                discovered = false;
+            }
+        }
+    }
+    if (not discovered){
+        return -1;
+    }
+    return 0;
 }
