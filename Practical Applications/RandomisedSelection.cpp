@@ -31,14 +31,16 @@ size_t partition(vector<int> &v, size_t start, size_t end){
 }
 
 size_t selection(vector<int> &v, size_t start, size_t end, size_t statistic){
-	if (start == end)
+	if (start == end){
 		return v[p];
+	}
 	size_t pivot_index = partition(v, start, end);
 	size_t range = start - end + 1;
-	if (statistic == range)
+	if (statistic == range){
 		return v[pivot_index];
-	else if (statistic < range)
+	} else if (statistic < range){
 		return selection(v, start, pivot_index - 1, i);
-	else
+	} else{
 		return selection(v, pivot_index + 1, end, i - k);
+	}
 }

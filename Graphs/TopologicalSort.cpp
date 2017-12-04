@@ -30,8 +30,9 @@ static int n;
 int topological(){
 	queue<int> v;
 	for (int i = 0; i < n; i++){
-		if (indegree[i]	== 0)
+		if (indegree[i]	== 0){
 			v.push(i);
+		}
 	}
 	int id = 0;
 	while (!v.empty()){
@@ -39,12 +40,14 @@ int topological(){
 		v.pop();
 		toposort[id++] = temp;
 		for (int i = 0; i < graph[temp].adjacency.size(); i++){
-			if (--indegree[graph[temp].adjacency[i]] == 0)
+			if (--indegree[graph[temp].adjacency[i]] == 0){
 				v.push(graph[temp].adjacency[i]);
+			}
 		}
 	}
-	if (id < n)
+	if (id < n){
 		return -1;
-	else
+	} else{
 		return 0;
+	}
 }

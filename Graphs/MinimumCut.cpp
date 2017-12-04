@@ -55,9 +55,9 @@ int mincut(Graph *graph){
 		int primary = find(subsets, edge[i].source);
 		int secondary = find(subsets, edge[i].destination);
 		
-		if (primary == secondary)
+		if (primary == secondary){
 			continue;
-		else{
+		} else{
 			vertices--;
 			join(subsets, primary, secondary);
 		}
@@ -69,16 +69,18 @@ int mincut(Graph *graph){
 		int primary = find(subsets, edge[i].source);
 		int secondary = find(subsets, edge[i].destination);
 		
-		if (primary != secondary)
+		if (primary != secondary){
 			edgecuts++;
+		}
 	}
 	
 	return edgecuts;
 }
 
 int find(struct subset subsets[], int i){
-	if (subsets[i].parent != i)
+	if (subsets[i].parent != i){
 		subsets[i].parent = find(subsets, subsets[i].parent);
+	}
 	
 	return subsets[i].parent;
 }
@@ -87,11 +89,11 @@ int join(struct subset subsets[], int x, int y){
 	int xorigin = find(subsets, x);
 	int yorigin = find(subsets, y);
 	
-	if (subsets[xorigin].rank < subsets[yorigin].rank)
+	if (subsets[xorigin].rank < subsets[yorigin].rank){
 		subsets[xorigin].parent = yorigin;
-	else if (subsets[xorigin].rank > subsets[yorigin].rank)
+	} else if (subsets[xorigin].rank > subsets[yorigin].rank){
 		subsets[yorigin].parent = xorigin;
-	else{
+	} else{
 		subsets[yorigin].parent = xorigin;
 		subsets[xorigin].rank++;
 	}

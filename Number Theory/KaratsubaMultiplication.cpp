@@ -42,16 +42,17 @@ string add(string num1, string num2){
 		sum = sum % 10;
 		result = to_string(sum) + result;
 	}
-	if (carryover)
+	if (carryover){
 		result = to_string(carryover) + result;
+	}
 	return result;
 }
 
 long karatsuba(string num1, string num2){
 	int n = equalize(num1, num2);
-	if (n == 0)
+	if (n == 0){
 		return 0;
-	else if (n == 1){
+	} else if (n == 1){
 		return (num1[0] - '0') * (num2[0] - '0');
 	} else{
 		int primary = n / 2;

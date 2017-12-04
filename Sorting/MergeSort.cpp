@@ -24,15 +24,16 @@ void merge(vector<int> &v, size_t start, size_t end, int order){
     size_t iter2 = mid + 1;
     vector<int> temp(end - start + 1);
     for (int &val : temp){
-        if (iter1 > mid)
+        if (iter1 > mid){
             val = v[iter2++];
-        else if (iter2 > end)
+        } else if (iter2 > end){
             val = v[iter1++];
-        else{
-            if (order * v[iter1] < order * v[iter2])
+        } else{
+            if (order * v[iter1] < order * v[iter2]){
                 val = v[iter1++];
-            else
+            } else{
                 val = v[iter2++];
+            }
         }
     }
     size_t s = start;
@@ -42,8 +43,9 @@ void merge(vector<int> &v, size_t start, size_t end, int order){
 }
 
 void merge_sort(vector<int> &v, size_t start, size_t end, int order){
-    if (start < end)
+    if (start < end){
         size_t mid = (start + end) / 2;
+    }
     merge_sort(v, start, mid, order);
     merge_sort(v, mid + 1, end, order);
     merge(v, start, end, order);

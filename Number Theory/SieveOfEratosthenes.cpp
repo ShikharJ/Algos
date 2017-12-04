@@ -20,10 +20,11 @@ vector<bool> sieve(const size_t &limit){
 	primes[0] = primes[1] = false;
 	size_t multiple;
 	for (size_t num = 2; num <= sqrt(limit); num++){
-		if (primes[num])
+		if (primes[num]){
 			for (multiple = num * num; multiple <= limit; multiple += num){
 				primes[multiple] = false;
 			}
+		}
 	}
 	return primes;
 }
