@@ -44,7 +44,7 @@ int prim(){
 	while (count < n - 1){
 		discovered[external] = true;
 		for (int i = 0; i < graph[external].adjacency.size(); i++){
-			if (not discovered[external].adjacency[i]){
+			if (not discovered[graph[external].adjacency[i]]){
 				edge e;
 				e.start = external;
 				e.end = graph[external].adjacency[i];
@@ -54,6 +54,7 @@ int prim(){
 		}
 		while (not subgraph.empty()){
 			edge e = subgraph.top();
+			subgraph.pop();
 			if (not discovered[e.end]){
 				returned += e.weight;
 				external = e.end;
