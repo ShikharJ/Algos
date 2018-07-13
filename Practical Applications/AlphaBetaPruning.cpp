@@ -1,6 +1,6 @@
 /*
 Alpha-Beta Pruning Algorithm
------------------
+----------------------------
 Time Complexity : Best Case : O(b^(d/2))
 				  Worst Case : O(b^d)
 Space Complexity : O(n)
