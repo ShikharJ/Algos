@@ -43,7 +43,7 @@ void update_tree(size_t index, size_t x, int value, size_t left, size_t right){
 }
 
 int query_tree(size_t index, size_t l, size_t r, size_t left, size_t right){
-	if (l <= left and r <= right){
+	if (l <= left and r >= right){
 		return tree[index];
 	}
 	int value = 999999999;
